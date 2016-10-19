@@ -15,8 +15,7 @@ class IrisGui(QtGui.QMainWindow,iris_uic):
 		self.get_relations_button.clicked.connect(self.getRelationsButtonClicked)
 
 	def selectFileButtonClicked(self):
-		self.file_select_dialog = QtGui.QFileDialog()
-		self.file_select_dialog.show()
+		selected_file = QtGui.QFileDialog.getOpenFileName()
 		
 
 	def getRelationsButtonClicked(self):
